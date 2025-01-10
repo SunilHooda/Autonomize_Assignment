@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Home from "./components/Home/Home.jsx";
+import Repositories from "./components/Repositories/Repositories.jsx";
+// import RepositoryDetails from "./components/RepositoryDetails";
+// import Followers from "./components/Followers";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [repositories, setRepositories] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home setUser={setUser} setRepositories={setRepositories} />}
+        />
+        <Route
+          path="/repositories/:username"
+          element={<Repositories user={user} repositories={repositories} />}
+        />
+        {/* <Route path="/repository/:repoName" element={<RepositoryDetails />} />
+        <Route
+          path="/followers/:username"
+          element={
+            <Followers setUser={setUser} setRepositories={setRepositories} />
+          }
+        /> */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

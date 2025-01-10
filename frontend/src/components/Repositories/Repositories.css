@@ -1,0 +1,101 @@
+/* Repositories Component */
+.repositories {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* User Details Section */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.user-details img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+}
+
+.user-details h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.user-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.user-details p span {
+  font-weight: bold;
+}
+
+/* Repositories Section */
+.repo-list {
+  margin-top: 20px;
+}
+
+.repo-list h3 {
+  font-size: 1.5rem;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+/* Repository Card Grid */
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.repo {
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.repo:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.repo h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.repo p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.repo a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007acc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.repo a:hover {
+  background-color: #005a9c;
+}
