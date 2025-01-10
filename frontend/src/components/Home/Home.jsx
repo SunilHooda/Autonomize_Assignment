@@ -9,7 +9,7 @@ const Home = ({ setUser, setRepositories }) => {
   const handleSearch = async () => {
     try {
       const response = await axios.post(
-        `https://autonomize-assignment-lfuk.vercel.app/api/users/getUser`,
+        `https://autonomize-assignment-jet.vercel.app/api/users/getUser`,
         { username }
       );
 

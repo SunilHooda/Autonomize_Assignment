@@ -12,7 +12,7 @@ const Repositories = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `https://autonomize-assignment-lfuk.vercel.app/api/users/repositories/${username}`
+          `https://autonomize-assignment-jet.vercel.app/api/users/repositories/${username}`
         );
         setUserDetails(response.data.user);
         setRepositories(response.data.repositories);
